@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /gwanak-final-index/
+Disallow: /gwanak-naver-index/
 
 User-agent: Yeti
 Allow: /
+Disallow: /gwanak-final-index/
+Disallow: /gwanak-naver-index/
 
 Sitemap: https://gwanak1004.co.kr/sitemap.xml

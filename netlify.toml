@@ -1,0 +1,38 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/gwanak-final-index"
+  to = "/gwanak-final-index/"
+  status = 301
+
+[[redirects]]
+  from = "/gwanak-naver-index"
+  to = "/gwanak-naver-index/"
+  status = 301
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/gwanak-final-index/"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/gwanak-naver-index/"
+  [headers.values]
+    X-Robots-Tag = "noindex"
