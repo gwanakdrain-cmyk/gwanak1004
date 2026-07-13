@@ -2,12 +2,6 @@
   publish = "."
 
 [[redirects]]
-  from = "/*"
-  to = "/:splat/"
-  status = 301
-  force = false
-
-[[redirects]]
   from = "/gwanak-final-index"
   to = "/gwanak-final-index/"
   status = 301
