@@ -2,6 +2,12 @@
   publish = "."
 
 [[redirects]]
+  from = "https://www.gwanak1004.co.kr/*"
+  to = "https://gwanak1004.co.kr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/gwanak-final-index"
   to = "/gwanak-final-index/"
   status = 301
