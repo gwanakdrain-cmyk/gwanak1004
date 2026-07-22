@@ -196,54 +196,53 @@ footer strong{color:#fff;}
 .hashtags { font-size:12px; color:#5a6478; margin-bottom:28px; line-height:2.2; }
 
 
-/* ===== 작업사진 썸네일 갤러리 ===== */
-.thumb-gallery {
-  margin-bottom:32px;
-}
-.thumb-main { display:none; }/*
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-  margin-bottom:8px;
-  cursor:pointer;
-  transition:opacity .2s;
-}
-.thumb-main:hover { opacity:.92; }
+/* ===== 작업사진·장비 썸네일 (동일 크기 그리드) ===== */
+.thumb-gallery { margin-bottom:32px; }
+.thumb-main { display:none !important; }
 .thumb-strip {
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:6px;
+  gap:8px;
 }
 .thumb-strip img {
   width:100%;
   aspect-ratio:1/1;
   object-fit:cover;
-  border-radius:6px;
-  cursor:pointer;
-  opacity:.75;
-  transition:opacity .2s, outline .1s;
+  border-radius:8px;
   display:block;
+  opacity:1 !important;
+  outline:none !important;
 }
-.thumb-strip img:hover,
-.thumb-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
 @media(max-width:480px){
   .thumb-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+/* ===== 장비 썸네일 ===== */
+.equip-gallery { margin-bottom:32px; }
+.equip-main { display:none !important; }
+.equip-strip {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px;
+}
+.equip-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+  opacity:1 !important;
+  outline:none !important;
+}
+@media(max-width:480px){
+  .equip-strip { grid-template-columns:repeat(4,1fr); }
 }
 
 /* ===== 장비 썸네일 갤러리 ===== */
 .equip-gallery {
   margin-bottom:32px;
 }
-.equip-main {
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-  margin-bottom:8px;
-}
+.equip-main { display:none !important; }
 .equip-strip {
   display:grid;
   grid-template-columns:repeat(6,1fr);
