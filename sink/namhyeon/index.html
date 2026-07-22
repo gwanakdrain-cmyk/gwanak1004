@@ -144,7 +144,128 @@ footer strong{color:#fff;}
   .mobile-call-bar{display:block;}
   .float-btn{display:none;}
   body{padding-bottom:80px;}
-}</style>
+}
+/* ===== 큐카드 ===== */
+.hero-inner { display:flex; align-items:flex-start; gap:24px; max-width:960px; margin:0 auto; }
+.hero-text  { flex:1; min-width:0; }
+.qcard-wrap {
+  background:rgba(255,255,255,.13);
+  border:1.5px solid rgba(255,255,255,.3);
+  border-radius:16px;
+  padding:20px 18px;
+  min-width:175px;
+  flex-shrink:0;
+}
+.qcard-header { text-align:center; margin-bottom:14px; }
+.qcard-label  { font-size:11px; color:rgba(255,255,255,.7); letter-spacing:.5px; }
+.qcard-min    { font-size:40px; font-weight:800; color:#fff; line-height:1.1; }
+.qcard-min span { font-size:18px; font-weight:700; }
+.qcard-area   { font-size:11px; color:rgba(255,255,255,.6); margin-top:2px; }
+.qcard-items  { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:7px; }
+.qcard-items li { font-size:12px; color:rgba(255,255,255,.92); display:flex; align-items:center; gap:6px; }
+.qcard-items li::before { content:"✔"; color:#e8a020; font-size:11px; flex-shrink:0; }
+@media(max-width:640px){
+  .hero-inner { flex-direction:column; }
+  .qcard-wrap { min-width:unset; width:100%; }
+}
+
+/* ===== 이미지 정사각형 ===== */
+.work-photo-grid img,
+.work-photos-grid img,
+.photo-grid img,
+.equip-grid img,
+.gallery-grid img {
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+
+/* ===== NEARBY 칩 ===== */
+.nearby { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px; }
+.nearby a {
+  background:#f7f9fc; border:1px solid #dde3ed;
+  border-radius:50px; padding:7px 16px;
+  font-size:13px; color:#1e2430; text-decoration:none;
+  white-space:nowrap; transition:all .2s;
+}
+.nearby a:hover { background:#1a4a8a; color:#fff; }
+
+/* ===== 해시태그 ===== */
+.hashtags { font-size:12px; color:#5a6478; margin-bottom:28px; line-height:2.2; }
+
+
+/* ===== 작업사진 썸네일 갤러리 ===== */
+.thumb-gallery {
+  margin-bottom:32px;
+}
+.thumb-main { display:none; }/*
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:8px;
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.thumb-main:hover { opacity:.92; }
+.thumb-strip {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:6px;
+}
+.thumb-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:.75;
+  transition:opacity .2s, outline .1s;
+  display:block;
+}
+.thumb-strip img:hover,
+.thumb-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
+@media(max-width:480px){
+  .thumb-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+/* ===== 장비 썸네일 갤러리 ===== */
+.equip-gallery {
+  margin-bottom:32px;
+}
+.equip-main {
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:8px;
+}
+.equip-strip {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:6px;
+}
+.equip-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:.75;
+  transition:opacity .2s, outline .1s;
+  display:block;
+}
+.equip-strip img:hover,
+.equip-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
+@media(max-width:480px){
+  .equip-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://gwanak1004.co.kr/"}, {"@type": "ListItem", "position": 2, "name": "싱크대 뚫음", "item": "https://gwanak1004.co.kr/sink/"}, {"@type": "ListItem", "position": 3, "name": "남현동 싱크대막힘", "item": "https://gwanak1004.co.kr/sink/namhyeon/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "세정제로 해결 안 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "시중 세정제는 표면 세척이에요. 굳은 기름때는 세정제로 녹지 않아요. 고압세척이 필요해요."}}, {"@type": "Question", "name": "비용이 어떻게 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "현장 상태 확인 후 견적을 드려요. 도착 후 비용을 먼저 안내하고, 동의 후에만 작업해요."}}, {"@type": "Question", "name": "영업 중에 출동 가능한가요?", "acceptedAnswer": {"@type": "Answer", "text": "영업 중 긴급 출동해요. 최소 방해로 빠르게 처리해드릴게요."}}]}</script>
 <link rel="icon" href="/favicon.ico">
@@ -164,9 +285,14 @@ footer strong{color:#fff;}
   <a class="hero-cta" href="tel:07089833421">📞 전화 걸기</a>
   <div class="hero-tags"><div class="hero-tag">✅ 출장 견적 무료</div><div class="hero-tag">✅ 동의 후 시작</div><div class="hero-tag">✅ 365일 24시간</div><div class="hero-tag">✅ 즉시 출동</div></div>
 </div>
-  <div class="hero-emoji-area" style="flex-shrink:0;text-align:center;display:flex;align-items:center;justify-content:center;width:220px;height:220px;background:rgba(255,255,255,0.10);border-radius:50%;border:3px solid rgba(255,255,255,0.25);">
-    <span style="font-size:100px;line-height:1;display:block;">🍳</span>
+  <div class="qcard-wrap">
+  <div class="qcard-header">
+    <div class="qcard-label">평균 도착</div>
+    <div class="qcard-min">29<span>분</span></div>
+    <div class="qcard-area">남현동 기준</div>
   </div>
+  <ul class="qcard-items"><li>견적 확인 후 진행</li><li>출장비 0원</li><li>새벽 긴급 출동</li><li>같은 증상 A/S 1년</li></ul>
+</div>
 </div></div>
 </div></div>
 
@@ -190,9 +316,13 @@ footer strong{color:#fff;}
 3단계: 역류 발생 → 고압세척 긴급 처리
 
 서울특별시에서 1단계에 처리하면 가장 저렴하게 해결돼요.</p></div>
-<div class="sl">EQUIPMENT</div><h2 class="st">전문 장비 보유</h2><div class="equip-photos"><div class="eq-card"><img src="/images/equipment/gwanak-equipment-05.jpg" alt="전문 장비 1" loading="lazy" width="300" height="180" style="width:100%;height:150px;object-fit:cover;display:block;border-radius:8px;"><div class="eq-nm">전문 장비 1</div></div><div class="eq-card"><img src="/images/equipment/gwanak-equipment-02.jpg" alt="전문 장비 2" loading="lazy" width="300" height="180" style="width:100%;height:150px;object-fit:cover;display:block;border-radius:8px;"><div class="eq-nm">전문 장비 2</div></div><div class="eq-card"><img src="/images/equipment/gwanak-equipment-03.jpg" alt="전문 장비 3" loading="lazy" width="300" height="180" style="width:100%;height:150px;object-fit:cover;display:block;border-radius:8px;"><div class="eq-nm">전문 장비 3</div></div></div>
+<div class="sl">EQUIPMENT</div><h2 class="st">관악배관천사 전문 장비</h2><div class="equip-gallery">
+  <div class="equip-strip"><img src="/images/equipment/gwanak-equipment-01.jpg" alt="관악배관천사 고압세척기" loading="lazy"><img src="/images/equipment/gwanak-equipment-02.jpg" alt="관악배관천사 배관 내시경" loading="lazy"><img src="/images/equipment/gwanak-equipment-03.jpg" alt="관악배관천사 플렉스 샤프트" loading="lazy"><img src="/images/equipment/gwanak-equipment-04.jpg" alt="관악배관천사 이물질 회수장비" loading="lazy"><img src="/images/equipment/gwanak-equipment-05.jpg" alt="관악배관천사 열화상 카메라" loading="lazy"><img src="/images/equipment/gwanak-equipment-06.jpg" alt="관악배관천사 슬러지 제거장비" loading="lazy"></div>
+</div>
 <div class="sl">FAQ</div><h2 class="st">서울특별시 싱크대막힘 자주 묻는 질문</h2><div class="faq-item"><div class="fq">Q. 막힘이 반복돼요.</div><div class="fa">A. 트랩 구조 또는 배관 경사 문제일 수 있어요.</div></div><div class="faq-item"><div class="fq">Q. 식당 싱크대도 처리해요?</div><div class="fa">A. 네, 긴급 출동 가능해요.</div></div><div class="faq-item"><div class="fq">Q. 고압세척 꼭 필요한가요?</div><div class="fa">A. 기름때 고착 시 필요해요.</div></div><div class="faq-item"><div class="fq">Q. 트랩 교체도 해줘요?</div><div class="fa">A. 네, 트랩 교체와 세척 병행해요.</div></div>
-<div class="sl">WORK PHOTOS</div><h2 class="st">서울특별시 싱크대막힘 실제 작업 사진</h2><div class="gallery-grid"><div><img src="/images/sink/gwanak-sink-work-05.jpg" alt="서울특별시 싱크대막힘 실제 작업 사진 1" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div><div><img src="/images/sink/gwanak-sink-work-01.jpg" alt="서울특별시 싱크대막힘 실제 작업 사진 2" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div><div><img src="/images/sink/gwanak-sink-work-04.jpg" alt="서울특별시 싱크대막힘 실제 작업 사진 3" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div></div>
+<div class="sl">WORK PHOTOS</div><h2 class="st">남현동 싱크대막힘 실제 작업 사진</h2><div class="thumb-gallery">
+  <div class="thumb-strip"><img src="/images/sink/gwanak-sink-work-01.jpg" alt="남현동 싱크대막힘 작업사진 1" loading="lazy"><img src="/images/sink/gwanak-sink-work-02.jpg" alt="남현동 싱크대막힘 작업사진 2" loading="lazy"><img src="/images/sink/gwanak-sink-work-03.jpg" alt="남현동 싱크대막힘 작업사진 3" loading="lazy"><img src="/images/sink/gwanak-sink-work-04.jpg" alt="남현동 싱크대막힘 작업사진 4" loading="lazy"><img src="/images/sink/gwanak-sink-work-05.jpg" alt="남현동 싱크대막힘 작업사진 5" loading="lazy"></div>
+</div>
 <div class="sl">LOCAL</div>
   <h2 class="st">남현동 주방 배관 폐색 지역 특성</h2>
   <div class="about-box">
@@ -247,11 +377,12 @@ footer strong{color:#fff;}
   <a class="ctel" href="tel:07089833421">📞 070-8983-3421</a>
 </div>
 
-<div class="sl">NEARBY</div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/sink/sinwon/">sinwon 싱크대막힘</a><a href="/sink/wangsan/">wangsan 싱크대막힘</a><a href="/sink/dangsan/">dangsan 싱크대막힘</a><a href="/sink/seorim/">seorim 싱크대막힘</a><a href="/sink/siheung/">siheung 싱크대막힘</a><a href="/sink/noryangjin/">noryangjin 싱크대막힘</a></div>
+<div class="sl">NEARBY</div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/sink/sinwon/">신원동 싱크대막힘</a><a href="/sink/wangsan/">왕산동 싱크대막힘</a><a href="/sink/dangsan/">당산동 싱크대막힘</a><a href="/sink/seorim/">서림동 싱크대막힘</a><a href="/sink/siheung/">시흥동 싱크대막힘</a><a href="/sink/noryangjin/">노량진동 싱크대막힘</a></div>
 <footer>
   <strong>관악배관천사</strong><br>
   서울특별시 관악구 보라매로 8<br>
-  하수구·변기·주방 배수 불량, 누수탐지, 수전·변기·세면대 교체 전문<br>
+  사업자등록번호: 257-11-03555<br>
+  하수구·변기·싱크대막힘, 누수탐지, 수전·변기·세면대 교체 전문<br>
   대표전화: 070-8983-3421 · 365일 24시간<br>
   © 관악배관천사. All rights reserved.
 </footer>
@@ -269,5 +400,44 @@ footer strong{color:#fff;}
 
 <!-- 데스크톱 플로팅 버튼 -->
 <a class="float-btn" href="tel:07089833421" title="전화 걸기">📞</a>
+
+
+<script>
+(function(){
+  // 작업사진 썸네일 전환
+  document.querySelectorAll('.thumb-strip img').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var gallery = this.closest('.thumb-gallery');
+      var main = gallery.querySelector('.thumb-main');
+      var prev = gallery.querySelector('.thumb-strip .active');
+      if(prev) prev.classList.remove('active');
+      this.classList.add('active');
+      main.src = this.src;
+      main.alt = this.alt;
+    });
+  });
+  // 첫 번째 썸네일 active
+  document.querySelectorAll('.thumb-strip').forEach(function(strip){
+    var first = strip.querySelector('img');
+    if(first) first.classList.add('active');
+  });
+  // 장비사진 썸네일 전환
+  document.querySelectorAll('.equip-strip img').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var gallery = this.closest('.equip-gallery');
+      var main = gallery.querySelector('.equip-main');
+      var prev = gallery.querySelector('.equip-strip .active');
+      if(prev) prev.classList.remove('active');
+      this.classList.add('active');
+      main.src = this.src;
+      main.alt = this.alt;
+    });
+  });
+  document.querySelectorAll('.equip-strip').forEach(function(strip){
+    var first = strip.querySelector('img');
+    if(first) first.classList.add('active');
+  });
+})();
+</script>
 
 </body></html>

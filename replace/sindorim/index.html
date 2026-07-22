@@ -140,7 +140,128 @@ footer strong{color:#fff;}
   .mobile-call-bar{display:block;}
   .float-btn{display:none;}
   body{padding-bottom:80px;}
-}</style>
+}
+/* ===== 큐카드 ===== */
+.hero-inner { display:flex; align-items:flex-start; gap:24px; max-width:960px; margin:0 auto; }
+.hero-text  { flex:1; min-width:0; }
+.qcard-wrap {
+  background:rgba(255,255,255,.13);
+  border:1.5px solid rgba(255,255,255,.3);
+  border-radius:16px;
+  padding:20px 18px;
+  min-width:175px;
+  flex-shrink:0;
+}
+.qcard-header { text-align:center; margin-bottom:14px; }
+.qcard-label  { font-size:11px; color:rgba(255,255,255,.7); letter-spacing:.5px; }
+.qcard-min    { font-size:40px; font-weight:800; color:#fff; line-height:1.1; }
+.qcard-min span { font-size:18px; font-weight:700; }
+.qcard-area   { font-size:11px; color:rgba(255,255,255,.6); margin-top:2px; }
+.qcard-items  { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:7px; }
+.qcard-items li { font-size:12px; color:rgba(255,255,255,.92); display:flex; align-items:center; gap:6px; }
+.qcard-items li::before { content:"✔"; color:#e8a020; font-size:11px; flex-shrink:0; }
+@media(max-width:640px){
+  .hero-inner { flex-direction:column; }
+  .qcard-wrap { min-width:unset; width:100%; }
+}
+
+/* ===== 이미지 정사각형 ===== */
+.work-photo-grid img,
+.work-photos-grid img,
+.photo-grid img,
+.equip-grid img,
+.gallery-grid img {
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+
+/* ===== NEARBY 칩 ===== */
+.nearby { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px; }
+.nearby a {
+  background:#f7f9fc; border:1px solid #dde3ed;
+  border-radius:50px; padding:7px 16px;
+  font-size:13px; color:#1e2430; text-decoration:none;
+  white-space:nowrap; transition:all .2s;
+}
+.nearby a:hover { background:#1a4a8a; color:#fff; }
+
+/* ===== 해시태그 ===== */
+.hashtags { font-size:12px; color:#5a6478; margin-bottom:28px; line-height:2.2; }
+
+
+/* ===== 작업사진 썸네일 갤러리 ===== */
+.thumb-gallery {
+  margin-bottom:32px;
+}
+.thumb-main { display:none; }/*
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:8px;
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.thumb-main:hover { opacity:.92; }
+.thumb-strip {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:6px;
+}
+.thumb-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:.75;
+  transition:opacity .2s, outline .1s;
+  display:block;
+}
+.thumb-strip img:hover,
+.thumb-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
+@media(max-width:480px){
+  .thumb-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+/* ===== 장비 썸네일 갤러리 ===== */
+.equip-gallery {
+  margin-bottom:32px;
+}
+.equip-main {
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:8px;
+}
+.equip-strip {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:6px;
+}
+.equip-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:.75;
+  transition:opacity .2s, outline .1s;
+  display:block;
+}
+.equip-strip img:hover,
+.equip-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
+@media(max-width:480px){
+  .equip-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+</style>
 </head>
 <body>
 <div class="eb">📞 지금 바로 연결 &nbsp;<a href="tel:07089833421">070-8983-3421</a>&nbsp; · 365일 24시간</div>
@@ -157,9 +278,14 @@ footer strong{color:#fff;}
   <a class="hero-cta" href="tel:07089833421">📞 전화 걸기</a>
   <div class="hero-tags"><div class="hero-tag">✅ 도착 전 비용 안내</div><div class="hero-tag">✅ 동의 후 작업 시작</div><div class="hero-tag">✅ 전화 상담 무료</div><div class="hero-tag">✅ 24시간 접수</div></div>
 </div>
-  <div class="hero-emoji-area" style="flex-shrink:0;text-align:center;display:flex;align-items:center;justify-content:center;width:220px;height:220px;background:rgba(255,255,255,0.10);border-radius:50%;border:3px solid rgba(255,255,255,0.25);">
-    <span style="font-size:100px;line-height:1;display:block;">🔩</span>
+  <div class="qcard-wrap">
+  <div class="qcard-header">
+    <div class="qcard-label">평균 도착</div>
+    <div class="qcard-min">28<span>분</span></div>
+    <div class="qcard-area">신도림동 기준</div>
   </div>
+  <ul class="qcard-items"><li>고객 동의 후 작업</li><li>무료 현장 방문</li><li>공휴일·주말 출동</li><li>꼼꼼 사후관리</li></ul>
+</div>
 </div></div>
 </div></div>
 
@@ -200,11 +326,10 @@ footer strong{color:#fff;}
 
 수전·변기 교체는 관악배관천사가 당일 설치해 드려요.</p></div>
 
-  <div class="sl">EQUIPMENT</div>
-  <h2 class="st">전문 장비 보유</h2>
-  <div class="equip-grid"><div class="equip-card"><p class="ei">🔍</p><div><h4>내시경 카메라</h4><p>배관 내부를 직접 확인해 막힘 위치와 원인을 파악해요.</p></div></div><div class="equip-card"><p class="ei">💦</p><div><h4>고압세척기</h4><p>강한 수압으로 배관 내벽의 기름때·슬러지를 완전히 제거해요.</p></div></div><div class="equip-card"><p class="ei">🔧</p><div><h4>전동 스프링</h4><p>깊은 곳의 이물질 제거와 굴곡부 배관 처리에 사용해요.</p></div></div><div class="equip-card"><p class="ei">🌀</p><div><h4>석션(흡입기)</h4><p>분쇄된 오염물을 즉시 흡입해 외부로 배출해요.</p></div></div></div>
-
-  <div class="sl">AREA</div>
+  <div class="sl">EQUIPMENT</div><h2 class="st">관악배관천사 전문 장비</h2><div class="equip-gallery">
+  <div class="equip-strip"><img src="/images/equipment/gwanak-equipment-01.jpg" alt="관악배관천사 고압세척기" loading="lazy"><img src="/images/equipment/gwanak-equipment-02.jpg" alt="관악배관천사 배관 내시경" loading="lazy"><img src="/images/equipment/gwanak-equipment-03.jpg" alt="관악배관천사 플렉스 샤프트" loading="lazy"><img src="/images/equipment/gwanak-equipment-04.jpg" alt="관악배관천사 이물질 회수장비" loading="lazy"><img src="/images/equipment/gwanak-equipment-05.jpg" alt="관악배관천사 열화상 카메라" loading="lazy"><img src="/images/equipment/gwanak-equipment-06.jpg" alt="관악배관천사 슬러지 제거장비" loading="lazy"></div>
+</div>
+<div class="sl">AREA</div>
   <h2 class="st">신도림동 지역 특성 및 교통</h2>
   <div class="station-box"><h3>📍 신도림동 배관 특성</h3><p style="margin:0 0 10px;font-size:14px;line-height:1.7">신도림동은 1·2호선 환승역을 중심으로 대형 복합쇼핑몰과 오피스텔이 밀집한 지역입니다. 유동인구가 많은 상업시설의 공용 화장실과 오피스텔 1인 거주자의 욕실 배수구 막힘이 자주 접수됩니다. 특히 대형 쇼핑몰은 영업 중 막힘이 발생하면 빠른 처리가 필요합니다.</p><div class="station-chips"><span class="station-chip">✔ 쇼핑몰 공용 화장실</span><span class="station-chip">✔ 오피스텔 1인가구 욕실</span><span class="station-chip">✔ 상업시설 주방 배관</span></div></div>
   <div style="background:#fff;border:1px solid var(--b);border-radius:var(--r);padding:18px;margin-bottom:20px;font-size:15px;line-height:1.8;">
@@ -233,17 +358,10 @@ footer strong{color:#fff;}
   <h2 class="st">신도림동 실제 작업 사례</h2>
   <div class="case-grid"><div class="case-card"><h4>📋 신도림동 복합쇼핑몰 화장실 변기 영업 중 막힘</h4><p>신도림동 대형 쇼핑몰에서 영업 시간 중 화장실 변기가 막힌 긴급 사례입니다. 30분 내 도착해 처리했습니다.</p></div><div class="case-card"><h4>📋 오피스텔 1인 거주자 욕실 트랩 머리카락 누적</h4><p>신도림동 오피스텔에서 욕실 트랩에 머리카락이 가득 쌓여 배수가 완전히 막힌 사례입니다.</p></div><div class="case-card"><h4>📋 신도림역 인근 프랜차이즈 음식점 싱크대 막힘</h4><p>신도림동 프랜차이즈 음식점 주방 싱크대가 점심 피크 시간에 막힌 긴급 사례입니다.</p></div></div>
 
-  <div class="sl">WORK PHOTOS</div>
-  <h2 class="st">신도림동 교체 실제 작업 사진</h2>
-  <div class="photo-grid3"><img src="/images/replace/gwanak-replace-work-04.jpg" alt="신도림동 교체 작업 현장" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;"><img src="/images/replace/gwanak-replace-work-05.jpg" alt="신도림동 교체 작업 현장" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;"><img src="/images/replace/gwanak-replace-work-06.jpg" alt="신도림동 교체 작업 현장" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;"></div>
-  <details style="margin-bottom:36px;">
-    <summary style="cursor:pointer;padding:10px 14px;background:#fff;border:1px solid var(--b);border-radius:8px;font-size:13px;color:var(--p);font-weight:600;">📷 전체 작업 사진 보기 (10장)</summary>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:7px;margin-top:8px;"><img src="/images/replace/gwanak-replace-work-01.jpg" alt="신도림동 교체 실제 작업 1" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-02.jpg" alt="신도림동 교체 실제 작업 2" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-03.jpg" alt="신도림동 교체 실제 작업 3" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-04.jpg" alt="신도림동 교체 실제 작업 4" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-05.jpg" alt="신도림동 교체 실제 작업 5" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-06.jpg" alt="신도림동 교체 실제 작업 6" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-07.jpg" alt="신도림동 교체 실제 작업 7" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-08.jpg" alt="신도림동 교체 실제 작업 8" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-09.jpg" alt="신도림동 교체 실제 작업 9" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"><img src="/images/replace/gwanak-replace-work-10.jpg" alt="신도림동 교체 실제 작업 10" loading="lazy" style="width:100%;height:120px;object-fit:cover;border-radius:6px;"></div>
-  </details>
-
-  
-
-  <div class="sl">FAQ</div>
+  <div class="sl">WORK PHOTOS</div><h2 class="st">신도림동 교체서비스 실제 작업 사진</h2><div class="thumb-gallery">
+  <div class="thumb-strip"><img src="/images/replace/gwanak-replace-work-03.jpg" alt="신도림동 교체서비스 작업사진 1" loading="lazy"><img src="/images/replace/gwanak-replace-work-04.jpg" alt="신도림동 교체서비스 작업사진 2" loading="lazy"><img src="/images/replace/gwanak-replace-work-05.jpg" alt="신도림동 교체서비스 작업사진 3" loading="lazy"><img src="/images/replace/gwanak-replace-work-06.jpg" alt="신도림동 교체서비스 작업사진 4" loading="lazy"><img src="/images/replace/gwanak-replace-work-07.jpg" alt="신도림동 교체서비스 작업사진 5" loading="lazy"></div>
+</div>
+<div class="sl">FAQ</div>
   <h2 class="st">신도림동 교체 자주 묻는 질문</h2>
   <div class="faq-list"><div class="faq-item">
 <div class="faq-q" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
@@ -319,6 +437,7 @@ footer strong{color:#fff;}
 <footer>
   <strong>관악배관천사</strong><br>
   서울특별시 관악구 보라매로 8<br>
+  사업자등록번호: 257-11-03555<br>
   하수구·변기·싱크대막힘, 누수탐지, 수전·변기·세면대 교체 전문<br>
   대표전화: 070-8983-3421 · 365일 24시간<br>
   © 관악배관천사. All rights reserved.
@@ -337,5 +456,44 @@ footer strong{color:#fff;}
 
 <!-- 데스크톱 플로팅 버튼 -->
 <a class="float-btn" href="tel:07089833421" title="전화 걸기">📞</a>
+
+
+<script>
+(function(){
+  // 작업사진 썸네일 전환
+  document.querySelectorAll('.thumb-strip img').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var gallery = this.closest('.thumb-gallery');
+      var main = gallery.querySelector('.thumb-main');
+      var prev = gallery.querySelector('.thumb-strip .active');
+      if(prev) prev.classList.remove('active');
+      this.classList.add('active');
+      main.src = this.src;
+      main.alt = this.alt;
+    });
+  });
+  // 첫 번째 썸네일 active
+  document.querySelectorAll('.thumb-strip').forEach(function(strip){
+    var first = strip.querySelector('img');
+    if(first) first.classList.add('active');
+  });
+  // 장비사진 썸네일 전환
+  document.querySelectorAll('.equip-strip img').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var gallery = this.closest('.equip-gallery');
+      var main = gallery.querySelector('.equip-main');
+      var prev = gallery.querySelector('.equip-strip .active');
+      if(prev) prev.classList.remove('active');
+      this.classList.add('active');
+      main.src = this.src;
+      main.alt = this.alt;
+    });
+  });
+  document.querySelectorAll('.equip-strip').forEach(function(strip){
+    var first = strip.querySelector('img');
+    if(first) first.classList.add('active');
+  });
+})();
+</script>
 
 </body></html>

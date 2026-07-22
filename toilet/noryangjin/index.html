@@ -144,7 +144,128 @@ footer strong{color:#fff;}
   .mobile-call-bar{display:block;}
   .float-btn{display:none;}
   body{padding-bottom:80px;}
-}</style>
+}
+/* ===== 큐카드 ===== */
+.hero-inner { display:flex; align-items:flex-start; gap:24px; max-width:960px; margin:0 auto; }
+.hero-text  { flex:1; min-width:0; }
+.qcard-wrap {
+  background:rgba(255,255,255,.13);
+  border:1.5px solid rgba(255,255,255,.3);
+  border-radius:16px;
+  padding:20px 18px;
+  min-width:175px;
+  flex-shrink:0;
+}
+.qcard-header { text-align:center; margin-bottom:14px; }
+.qcard-label  { font-size:11px; color:rgba(255,255,255,.7); letter-spacing:.5px; }
+.qcard-min    { font-size:40px; font-weight:800; color:#fff; line-height:1.1; }
+.qcard-min span { font-size:18px; font-weight:700; }
+.qcard-area   { font-size:11px; color:rgba(255,255,255,.6); margin-top:2px; }
+.qcard-items  { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:7px; }
+.qcard-items li { font-size:12px; color:rgba(255,255,255,.92); display:flex; align-items:center; gap:6px; }
+.qcard-items li::before { content:"✔"; color:#e8a020; font-size:11px; flex-shrink:0; }
+@media(max-width:640px){
+  .hero-inner { flex-direction:column; }
+  .qcard-wrap { min-width:unset; width:100%; }
+}
+
+/* ===== 이미지 정사각형 ===== */
+.work-photo-grid img,
+.work-photos-grid img,
+.photo-grid img,
+.equip-grid img,
+.gallery-grid img {
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+
+/* ===== NEARBY 칩 ===== */
+.nearby { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px; }
+.nearby a {
+  background:#f7f9fc; border:1px solid #dde3ed;
+  border-radius:50px; padding:7px 16px;
+  font-size:13px; color:#1e2430; text-decoration:none;
+  white-space:nowrap; transition:all .2s;
+}
+.nearby a:hover { background:#1a4a8a; color:#fff; }
+
+/* ===== 해시태그 ===== */
+.hashtags { font-size:12px; color:#5a6478; margin-bottom:28px; line-height:2.2; }
+
+
+/* ===== 작업사진 썸네일 갤러리 ===== */
+.thumb-gallery {
+  margin-bottom:32px;
+}
+.thumb-main { display:none; }/*
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:8px;
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.thumb-main:hover { opacity:.92; }
+.thumb-strip {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:6px;
+}
+.thumb-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:.75;
+  transition:opacity .2s, outline .1s;
+  display:block;
+}
+.thumb-strip img:hover,
+.thumb-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
+@media(max-width:480px){
+  .thumb-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+/* ===== 장비 썸네일 갤러리 ===== */
+.equip-gallery {
+  margin-bottom:32px;
+}
+.equip-main {
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:8px;
+}
+.equip-strip {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:6px;
+}
+.equip-strip img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:.75;
+  transition:opacity .2s, outline .1s;
+  display:block;
+}
+.equip-strip img:hover,
+.equip-strip img.active { opacity:1; outline:2px solid #1a4a8a; }
+@media(max-width:480px){
+  .equip-strip { grid-template-columns:repeat(4,1fr); }
+}
+
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://gwanak1004.co.kr/"}, {"@type": "ListItem", "position": 2, "name": "변기 뚫음", "item": "https://gwanak1004.co.kr/toilet/"}, {"@type": "ListItem", "position": 3, "name": "노량진동 변기막힘", "item": "https://gwanak1004.co.kr/toilet/noryangjin/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "변기가 넘칠 것 같아요.", "acceptedAnswer": {"@type": "Answer", "text": "즉시 물 공급을 차단하고 연락주세요. 긴급 출동해요."}}, {"@type": "Question", "name": "물티슈를 많이 버렸어요.", "acceptedAnswer": {"@type": "Answer", "text": "물티슈는 배관에서 분해되지 않아요. 걸려 있을 가능성이 높아요. 빨리 꺼내야 해요."}}, {"@type": "Question", "name": "변기 교체 비용은요?", "acceptedAnswer": {"@type": "Answer", "text": "제품과 환경에 따라 달라요. 현장 확인 후 안내드려요."}}]}</script>
 <link rel="icon" href="/favicon.ico">
@@ -164,9 +285,14 @@ footer strong{color:#fff;}
   <a class="hero-cta" href="tel:07089833421">📞 전화 걸기</a>
   <div class="hero-tags"><div class="hero-tag">✅ 무료방문 견적</div><div class="hero-tag">✅ 작업 전 동의 필수</div><div class="hero-tag">✅ 365일 출동</div><div class="hero-tag">✅ 당일 처리</div></div>
 </div>
-  <div class="hero-emoji-area" style="flex-shrink:0;text-align:center;display:flex;align-items:center;justify-content:center;width:220px;height:220px;background:rgba(255,255,255,0.10);border-radius:50%;border:3px solid rgba(255,255,255,0.25);">
-    <span style="font-size:100px;line-height:1;display:block;">🚽</span>
+  <div class="qcard-wrap">
+  <div class="qcard-header">
+    <div class="qcard-label">평균 도착</div>
+    <div class="qcard-min">27<span>분</span></div>
+    <div class="qcard-area">노량진동 기준</div>
   </div>
+  <ul class="qcard-items"><li>작업 전 견적 필수 안내</li><li>방문비 청구 없음</li><li>365일 24시간 출동</li><li>빠르고 정확한 해결</li></ul>
+</div>
 </div></div>
 </div></div>
 
@@ -190,10 +316,14 @@ footer strong{color:#fff;}
 
 서울특별시에서 변기 물이 천천히 내려가기 시작하면 즉시 처리하세요.</p></div>
 <div class="sl">CAUTION</div><h2 class="st">이것만은 하지 마세요!</h2><div class="mistake-box"><div class="mi"><span class="mx">✕</span><span class="mt"><strong>물티슈를 변기에 버리기</strong> — 물에 녹지 않아 배관 굴곡부에 걸려요</span></div><div class="mi"><span class="mx">✕</span><span class="mt"><strong>뚫어뻥을 강하게 반복 사용</strong> — 노후 배관 연결부 손상으로 누수가 생겨요</span></div><div class="mi"><span class="mx">✕</span><span class="mt"><strong>물을 계속 내리기</strong> — 역류 상황에서 물을 더 내리면 피해가 커요</span></div><div class="mi"><span class="mx">✕</span><span class="mt"><strong>막힘 방치</strong> — 아래층 역류 피해로 이어질 수 있어요</span></div></div>
-<div class="sl">WORK PHOTOS</div><h2 class="st">서울특별시 변기막힘 실제 작업 사진</h2><div class="gallery-grid"><div><img src="/images/toilet/gwanak-toilet-work-03.jpg" alt="서울특별시 변기막힘 실제 작업 사진 1" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div><div><img src="/images/toilet/gwanak-toilet-work-06.jpg" alt="서울특별시 변기막힘 실제 작업 사진 2" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div><div><img src="/images/toilet/gwanak-toilet-work-04.jpg" alt="서울특별시 변기막힘 실제 작업 사진 3" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div><div><img src="/images/toilet/gwanak-toilet-work-05.jpg" alt="서울특별시 변기막힘 실제 작업 사진 4" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div><div><img src="/images/toilet/gwanak-toilet-work-01.jpg" alt="서울특별시 변기막힘 실제 작업 사진 5" loading="lazy" width="400" height="300" style="width:100%;height:200px;object-fit:cover;border-radius:8px;"></div></div>
+<div class="sl">WORK PHOTOS</div><h2 class="st">노량진동 변기막힘 실제 작업 사진</h2><div class="thumb-gallery">
+  <div class="thumb-strip"><img src="/images/toilet/gwanak-toilet-work-04.jpg" alt="노량진동 변기막힘 작업사진 1" loading="lazy"><img src="/images/toilet/gwanak-toilet-work-05.jpg" alt="노량진동 변기막힘 작업사진 2" loading="lazy"><img src="/images/toilet/gwanak-toilet-work-06.jpg" alt="노량진동 변기막힘 작업사진 3" loading="lazy"><img src="/images/toilet/gwanak-toilet-work-07.jpg" alt="노량진동 변기막힘 작업사진 4" loading="lazy"><img src="/images/toilet/gwanak-toilet-work-01.jpg" alt="노량진동 변기막힘 작업사진 5" loading="lazy"></div>
+</div>
 <div class="sl">PRICE</div><h2 class="st">서울특별시 변기막힘 비용 안내</h2><div class="cost-wrap"><div class="cr"><span class="cl">출장비</span><span class="cp">무료 방문</span></div><div class="cr"><span class="cl">작업 비용</span><span class="cp">현장 확인 후 안내</span></div><div class="cr"><span class="cl">야간·공휴일</span><span class="cp">별도 할증 없음</span></div><div class="cr"><span class="cl">과견적</span><span class="cp">절대 없음</span></div></div><p class="cn">※ 현장에서 상태를 직접 보고 솔직하게 말씀드려요. 작업 전 반드시 비용 안내 후 동의를 받고 시작해요.</p>
 <div class="sl">FAQ</div><h2 class="st">서울특별시 변기막힘 자주 묻는 질문</h2><div class="faq-item"><div class="fq">Q. 변기막힘 당일 처리 가능한가요?</div><div class="fa">A. 네, 당일 출동·당일 처리 가능해요.</div></div><div class="faq-item"><div class="fq">Q. 뚫어뻥으로 안 뚫려요.</div><div class="fa">A. 내시경으로 위치 확인 후 제거해요.</div></div><div class="faq-item"><div class="fq">Q. 이물질을 빠뜨렸어요.</div><div class="fa">A. 내시경으로 변기 교체 없이 제거해요.</div></div><div class="faq-item"><div class="fq">Q. 역류가 생겼어요.</div><div class="fa">A. 즉시 물 사용을 멈추고 연락 주세요.</div></div>
-<div class="sl">EQUIPMENT</div><h2 class="st">전문 장비 보유</h2><div class="equip-photos"><div class="eq-card"><img src="/images/equipment/gwanak-equipment-01.jpg" alt="전문 장비 1" loading="lazy" width="300" height="180" style="width:100%;height:150px;object-fit:cover;display:block;border-radius:8px;"><div class="eq-nm">전문 장비 1</div></div><div class="eq-card"><img src="/images/equipment/gwanak-equipment-04.jpg" alt="전문 장비 2" loading="lazy" width="300" height="180" style="width:100%;height:150px;object-fit:cover;display:block;border-radius:8px;"><div class="eq-nm">전문 장비 2</div></div><div class="eq-card"><img src="/images/equipment/gwanak-equipment-05.jpg" alt="전문 장비 3" loading="lazy" width="300" height="180" style="width:100%;height:150px;object-fit:cover;display:block;border-radius:8px;"><div class="eq-nm">전문 장비 3</div></div></div>
+<div class="sl">EQUIPMENT</div><h2 class="st">관악배관천사 전문 장비</h2><div class="equip-gallery">
+  <div class="equip-strip"><img src="/images/equipment/gwanak-equipment-01.jpg" alt="관악배관천사 고압세척기" loading="lazy"><img src="/images/equipment/gwanak-equipment-02.jpg" alt="관악배관천사 배관 내시경" loading="lazy"><img src="/images/equipment/gwanak-equipment-03.jpg" alt="관악배관천사 플렉스 샤프트" loading="lazy"><img src="/images/equipment/gwanak-equipment-04.jpg" alt="관악배관천사 이물질 회수장비" loading="lazy"><img src="/images/equipment/gwanak-equipment-05.jpg" alt="관악배관천사 열화상 카메라" loading="lazy"><img src="/images/equipment/gwanak-equipment-06.jpg" alt="관악배관천사 슬러지 제거장비" loading="lazy"></div>
+</div>
 <div class="sl">LOCAL</div>
   <h2 class="st">노량진동 변기 물 안내려감 지역 특성</h2>
   <div class="about-box">
@@ -248,10 +378,11 @@ footer strong{color:#fff;}
   <a class="ctel" href="tel:07089833421">📞 070-8983-3421</a>
 </div>
 
-<div class="sl">NEARBY</div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/toilet/garibong/">garibong 변기막힘</a><a href="/toilet/yeouido/">yeouido 변기막힘</a><a href="/toilet/banpo/">banpo 변기막힘</a><a href="/toilet/sinwon/">sinwon 변기막힘</a><a href="/toilet/miseong/">miseong 변기막힘</a><a href="/toilet/dangsan/">dangsan 변기막힘</a></div>
+<div class="sl">NEARBY</div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/toilet/garibong/">가리봉동 변기막힘</a><a href="/toilet/yeouido/">여의동 변기막힘</a><a href="/toilet/banpo/">반포동 변기막힘</a><a href="/toilet/sinwon/">신원동 변기막힘</a><a href="/toilet/miseong/">미성동 변기막힘</a><a href="/toilet/dangsan/">당산동 변기막힘</a></div>
 <footer>
   <strong>관악배관천사</strong><br>
   서울특별시 관악구 보라매로 8<br>
+  사업자등록번호: 257-11-03555<br>
   하수구·변기·싱크대막힘, 누수탐지, 수전·변기·세면대 교체 전문<br>
   대표전화: 070-8983-3421 · 365일 24시간<br>
   © 관악배관천사. All rights reserved.
@@ -270,5 +401,44 @@ footer strong{color:#fff;}
 
 <!-- 데스크톱 플로팅 버튼 -->
 <a class="float-btn" href="tel:07089833421" title="전화 걸기">📞</a>
+
+
+<script>
+(function(){
+  // 작업사진 썸네일 전환
+  document.querySelectorAll('.thumb-strip img').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var gallery = this.closest('.thumb-gallery');
+      var main = gallery.querySelector('.thumb-main');
+      var prev = gallery.querySelector('.thumb-strip .active');
+      if(prev) prev.classList.remove('active');
+      this.classList.add('active');
+      main.src = this.src;
+      main.alt = this.alt;
+    });
+  });
+  // 첫 번째 썸네일 active
+  document.querySelectorAll('.thumb-strip').forEach(function(strip){
+    var first = strip.querySelector('img');
+    if(first) first.classList.add('active');
+  });
+  // 장비사진 썸네일 전환
+  document.querySelectorAll('.equip-strip img').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var gallery = this.closest('.equip-gallery');
+      var main = gallery.querySelector('.equip-main');
+      var prev = gallery.querySelector('.equip-strip .active');
+      if(prev) prev.classList.remove('active');
+      this.classList.add('active');
+      main.src = this.src;
+      main.alt = this.alt;
+    });
+  });
+  document.querySelectorAll('.equip-strip').forEach(function(strip){
+    var first = strip.querySelector('img');
+    if(first) first.classList.add('active');
+  });
+})();
+</script>
 
 </body></html>

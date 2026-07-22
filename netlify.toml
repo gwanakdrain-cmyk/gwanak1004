@@ -1,44 +1,42 @@
 [build]
   publish = "."
 
+# www → non-www (최우선)
 [[redirects]]
   from = "https://www.gwanak1004.co.kr/*"
-  to = "https://gwanak1004.co.kr/:splat"
+  to   = "https://gwanak1004.co.kr/:splat"
   status = 301
-  force = true
+  force  = true
 
+# 숨김 폴더 슬래시 정규화
 [[redirects]]
-  from = "/*"
-  to = "/:splat/"
-  status = 301
-  force = false
-
-[[redirects]]
-  from = "/gwanak-final-index"
-  to = "/gwanak-final-index/"
+  from   = "/gwanak-final-index"
+  to     = "/gwanak-final-index/"
   status = 301
 
 [[redirects]]
-  from = "/gwanak-naver-index"
-  to = "/gwanak-naver-index/"
+  from   = "/gwanak-naver-index"
+  to     = "/gwanak-naver-index/"
   status = 301
 
 [build.environment]
   NODE_VERSION = "18"
 
+# 전체 크롤링 허용
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Robots-Tag = "index, follow"
-    X-Frame-Options = "SAMEORIGIN"
+    X-Robots-Tag         = "index, follow"
+    X-Frame-Options      = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
 
+# 숨김 폴더 noindex
 [[headers]]
-  for = "/gwanak-final-index/"
+  for = "/gwanak-final-index/*"
   [headers.values]
-    X-Robots-Tag = "noindex"
+    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
-  for = "/gwanak-naver-index/"
+  for = "/gwanak-naver-index/*"
   [headers.values]
-    X-Robots-Tag = "noindex"
+    X-Robots-Tag = "noindex, nofollow"
