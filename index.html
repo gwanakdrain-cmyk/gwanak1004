@@ -118,11 +118,10 @@ footer strong{color:#fff;}
   <div class="section">
     <div class="sl">SERVICE AREA</div>
     <h2 class="st">서울 서남권 전 지역 출장</h2>
-    <p class="sd">지역을 클릭하면 해당 지역 하수구막힘 페이지로 이동해요.</p>
-
-    <div class="gu-block">
-      <div class="gu-name">🏢 관악구</div>
-      <div class="region-chips">
+<style>.tab-btns-GW{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px;}.tab-btn-GW{padding:7px 14px;border:2px solid #6A1B9A;border-radius:50px;background:#fff;color:#6A1B9A;font-weight:700;font-size:13px;cursor:pointer;transition:all .2s;}.tab-btn-GW.active{background:#6A1B9A;color:#fff;}.tab-panel-GW{display:none;}.tab-panel-GW.active{display:block;}</style>
+<div class="tab-btns-GW"><button class="tab-btn-GW active" onclick="showTabGW('drain')" id="tbtn_GW_drain">💦 하수구막힘</button><button class="tab-btn-GW " onclick="showTabGW('sink')" id="tbtn_GW_sink">🚰 싱크대막힘</button><button class="tab-btn-GW " onclick="showTabGW('toilet')" id="tbtn_GW_toilet">🚽 변기막힘</button><button class="tab-btn-GW " onclick="showTabGW('leak')" id="tbtn_GW_leak">🔍 누수탐지</button><button class="tab-btn-GW " onclick="showTabGW('replace')" id="tbtn_GW_replace">🔧 설비교체</button></div>
+<div class="tab-panel-GW active" id="tpnl_GW_drain">
+<div class="gu-block"><h3 class="gu-name">🏢 관악구</h3><div class="region-chips">
         <a class="region-chip" href="/drain/sinlim/">신림동</a>
         <a class="region-chip" href="/drain/seorim/">서림동</a>
         <a class="region-chip" href="/drain/sinsa/">신사동</a>
@@ -144,33 +143,21 @@ footer strong{color:#fff;}
         <a class="region-chip" href="/drain/miseong/">미성동</a>
         <a class="region-chip" href="/drain/sinwon/">신원동</a>
         <a class="region-chip" href="/drain/wangsan/">왕산동</a>
-      </div>
-    </div>
-
-    <div class="gu-block">
-      <div class="gu-name">🏢 동작구</div>
-      <div class="region-chips">
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 동작구</h3><div class="region-chips">
         <a class="region-chip" href="/drain/noryangjin/">노량진동</a>
         <a class="region-chip" href="/drain/sangdo/">상도동</a>
         <a class="region-chip" href="/drain/heukseok/">흑석동</a>
         <a class="region-chip" href="/drain/sadang/">사당동</a>
         <a class="region-chip" href="/drain/daebang/">대방동</a>
         <a class="region-chip" href="/drain/sindaebang/">신대방동</a>
-      </div>
-    </div>
-
-    <div class="gu-block">
-      <div class="gu-name">🏢 금천구</div>
-      <div class="region-chips">
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 금천구</h3><div class="region-chips">
         <a class="region-chip" href="/drain/gasan/">가산동</a>
         <a class="region-chip" href="/drain/doksan/">독산동</a>
         <a class="region-chip" href="/drain/siheung/">시흥동</a>
-      </div>
-    </div>
-
-    <div class="gu-block">
-      <div class="gu-name">🏢 구로구</div>
-      <div class="region-chips">
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 구로구</h3><div class="region-chips">
         <a class="region-chip" href="/drain/guro/">구로동</a>
         <a class="region-chip" href="/drain/sindorim/">신도림동</a>
         <a class="region-chip" href="/drain/garibong/">가리봉동</a>
@@ -179,12 +166,8 @@ footer strong{color:#fff;}
         <a class="region-chip" href="/drain/gochuk/">고척동</a>
         <a class="region-chip" href="/drain/gung/">궁동</a>
         <a class="region-chip" href="/drain/onsu/">온수동</a>
-      </div>
-    </div>
-
-    <div class="gu-block">
-      <div class="gu-name">🏢 영등포구</div>
-      <div class="region-chips">
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 영등포구</h3><div class="region-chips">
         <a class="region-chip" href="/drain/yeongdeungpo/">영등포동</a>
         <a class="region-chip" href="/drain/yeouido/">여의동</a>
         <a class="region-chip" href="/drain/dangsan/">당산동</a>
@@ -193,12 +176,8 @@ footer strong{color:#fff;}
         <a class="region-chip" href="/drain/yangpyeong/">양평동</a>
         <a class="region-chip" href="/drain/singil/">신길동</a>
         <a class="region-chip" href="/drain/daelim/">대림동</a>
-      </div>
-    </div>
-
-    <div class="gu-block">
-      <div class="gu-name">🏢 서초구</div>
-      <div class="region-chips">
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 서초구</h3><div class="region-chips">
         <a class="region-chip" href="/drain/seocho/">서초동</a>
         <a class="region-chip" href="/drain/jamwon/">잠원동</a>
         <a class="region-chip" href="/drain/banpo/">반포동</a>
@@ -206,45 +185,277 @@ footer strong{color:#fff;}
         <a class="region-chip" href="/drain/yangjae/">양재동</a>
         <a class="region-chip" href="/drain/naegok/">내곡동</a>
         <a class="region-chip" href="/drain/yeomgok/">염곡동</a>
-      </div>
-    </div>
-  </div>
+      </div></div>
 </div>
-
-<div class="why-section">
-  <div class="why-inner">
-    <div class="sl">WHY US</div>
-    <h2 class="st">관악배관천사를 선택하는 이유</h2>
-    <div class="why-grid">
-      <div class="why-item"><div class="why-num">24<span>시간</span></div><div class="why-label">365일 연중무휴<br>언제든 접수 가능</div></div>
-      <div class="why-item"><div class="why-num">6<span>개구</span></div><div class="why-label">관악·동작·금천·구로<br>영등포·서초 전 지역</div></div>
-      <div class="why-item"><div class="why-num">0<span>원</span></div><div class="why-label">현장 도착 전<br>추가 비용 없음</div></div>
-      <div class="why-item"><div class="why-num">전문<span>장비</span></div><div class="why-label">고압세척·내시경·석션<br>전문 장비 보유</div></div>
-    </div>
-  </div>
+<div class="tab-panel-GW " id="tpnl_GW_sink">
+<div class="gu-block"><h3 class="gu-name">🏢 관악구</h3><div class="region-chips">
+        <a class="region-chip" href="/sink/sinlim/">신림동</a>
+        <a class="region-chip" href="/sink/seorim/">서림동</a>
+        <a class="region-chip" href="/sink/sinsa/">신사동</a>
+        <a class="region-chip" href="/sink/bongcheon/">봉천동</a>
+        <a class="region-chip" href="/sink/jungyang/">중앙동</a>
+        <a class="region-chip" href="/sink/inheon/">인헌동</a>
+        <a class="region-chip" href="/sink/namhyeon/">남현동</a>
+        <a class="region-chip" href="/sink/cheongryong/">청룡동</a>
+        <a class="region-chip" href="/sink/naksungdae/">낙성대동</a>
+        <a class="region-chip" href="/sink/samseong/">삼성동</a>
+        <a class="region-chip" href="/sink/jowon/">조원동</a>
+        <a class="region-chip" href="/sink/daehak/">대학동</a>
+        <a class="region-chip" href="/sink/euncheon/">은천동</a>
+        <a class="region-chip" href="/sink/seonghyeon/">성현동</a>
+        <a class="region-chip" href="/sink/haengwoon/">행운동</a>
+        <a class="region-chip" href="/sink/cheonglim/">청림동</a>
+        <a class="region-chip" href="/sink/nangok/">난곡동</a>
+        <a class="region-chip" href="/sink/nanhyang/">난향동</a>
+        <a class="region-chip" href="/sink/miseong/">미성동</a>
+        <a class="region-chip" href="/sink/sinwon/">신원동</a>
+        <a class="region-chip" href="/sink/wangsan/">왕산동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 동작구</h3><div class="region-chips">
+        <a class="region-chip" href="/sink/noryangjin/">노량진동</a>
+        <a class="region-chip" href="/sink/sangdo/">상도동</a>
+        <a class="region-chip" href="/sink/heukseok/">흑석동</a>
+        <a class="region-chip" href="/sink/sadang/">사당동</a>
+        <a class="region-chip" href="/sink/daebang/">대방동</a>
+        <a class="region-chip" href="/sink/sindaebang/">신대방동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 금천구</h3><div class="region-chips">
+        <a class="region-chip" href="/sink/gasan/">가산동</a>
+        <a class="region-chip" href="/sink/doksan/">독산동</a>
+        <a class="region-chip" href="/sink/siheung/">시흥동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 구로구</h3><div class="region-chips">
+        <a class="region-chip" href="/sink/guro/">구로동</a>
+        <a class="region-chip" href="/sink/sindorim/">신도림동</a>
+        <a class="region-chip" href="/sink/garibong/">가리봉동</a>
+        <a class="region-chip" href="/sink/gaebong/">개봉동</a>
+        <a class="region-chip" href="/sink/oryu/">오류동</a>
+        <a class="region-chip" href="/sink/gochuk/">고척동</a>
+        <a class="region-chip" href="/sink/gung/">궁동</a>
+        <a class="region-chip" href="/sink/onsu/">온수동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 영등포구</h3><div class="region-chips">
+        <a class="region-chip" href="/sink/yeongdeungpo/">영등포동</a>
+        <a class="region-chip" href="/sink/yeouido/">여의동</a>
+        <a class="region-chip" href="/sink/dangsan/">당산동</a>
+        <a class="region-chip" href="/sink/mullae/">문래동</a>
+        <a class="region-chip" href="/sink/dorim/">도림동</a>
+        <a class="region-chip" href="/sink/yangpyeong/">양평동</a>
+        <a class="region-chip" href="/sink/singil/">신길동</a>
+        <a class="region-chip" href="/sink/daelim/">대림동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 서초구</h3><div class="region-chips">
+        <a class="region-chip" href="/sink/seocho/">서초동</a>
+        <a class="region-chip" href="/sink/jamwon/">잠원동</a>
+        <a class="region-chip" href="/sink/banpo/">반포동</a>
+        <a class="region-chip" href="/sink/bangbae/">방배동</a>
+        <a class="region-chip" href="/sink/yangjae/">양재동</a>
+        <a class="region-chip" href="/sink/naegok/">내곡동</a>
+        <a class="region-chip" href="/sink/yeomgok/">염곡동</a>
+      </div></div>
 </div>
-
-<div class="process-section">
-  <div class="section">
-    <div class="sl">HOW IT WORKS</div>
-    <h2 class="st">이렇게 진행돼요!</h2>
-    <div class="process-steps">
-      <div class="pstep"><div class="psn">1</div><h4>전화 접수</h4><p>증상과 위치를 말씀해주세요</p></div>
-      <div class="pstep"><div class="psn">2</div><h4>출장 배정</h4><p>담당 기사가 빠르게 배정돼요</p></div>
-      <div class="pstep"><div class="psn">3</div><h4>현장 진단</h4><p>원인을 정확히 파악해요</p></div>
-      <div class="pstep"><div class="psn">4</div><h4>비용 안내</h4><p>작업 전 먼저 안내드려요</p></div>
-      <div class="pstep"><div class="psn">5</div><h4>동의 후 작업</h4><p>동의 전 비용 없어요!</p></div>
-      <div class="pstep"><div class="psn">6</div><h4>완료 확인</h4><p>함께 확인하고 마무리해요</p></div>
-    </div>
-  </div>
+<div class="tab-panel-GW " id="tpnl_GW_toilet">
+<div class="gu-block"><h3 class="gu-name">🏢 관악구</h3><div class="region-chips">
+        <a class="region-chip" href="/toilet/sinlim/">신림동</a>
+        <a class="region-chip" href="/toilet/seorim/">서림동</a>
+        <a class="region-chip" href="/toilet/sinsa/">신사동</a>
+        <a class="region-chip" href="/toilet/bongcheon/">봉천동</a>
+        <a class="region-chip" href="/toilet/jungyang/">중앙동</a>
+        <a class="region-chip" href="/toilet/inheon/">인헌동</a>
+        <a class="region-chip" href="/toilet/namhyeon/">남현동</a>
+        <a class="region-chip" href="/toilet/cheongryong/">청룡동</a>
+        <a class="region-chip" href="/toilet/naksungdae/">낙성대동</a>
+        <a class="region-chip" href="/toilet/samseong/">삼성동</a>
+        <a class="region-chip" href="/toilet/jowon/">조원동</a>
+        <a class="region-chip" href="/toilet/daehak/">대학동</a>
+        <a class="region-chip" href="/toilet/euncheon/">은천동</a>
+        <a class="region-chip" href="/toilet/seonghyeon/">성현동</a>
+        <a class="region-chip" href="/toilet/haengwoon/">행운동</a>
+        <a class="region-chip" href="/toilet/cheonglim/">청림동</a>
+        <a class="region-chip" href="/toilet/nangok/">난곡동</a>
+        <a class="region-chip" href="/toilet/nanhyang/">난향동</a>
+        <a class="region-chip" href="/toilet/miseong/">미성동</a>
+        <a class="region-chip" href="/toilet/sinwon/">신원동</a>
+        <a class="region-chip" href="/toilet/wangsan/">왕산동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 동작구</h3><div class="region-chips">
+        <a class="region-chip" href="/toilet/noryangjin/">노량진동</a>
+        <a class="region-chip" href="/toilet/sangdo/">상도동</a>
+        <a class="region-chip" href="/toilet/heukseok/">흑석동</a>
+        <a class="region-chip" href="/toilet/sadang/">사당동</a>
+        <a class="region-chip" href="/toilet/daebang/">대방동</a>
+        <a class="region-chip" href="/toilet/sindaebang/">신대방동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 금천구</h3><div class="region-chips">
+        <a class="region-chip" href="/toilet/gasan/">가산동</a>
+        <a class="region-chip" href="/toilet/doksan/">독산동</a>
+        <a class="region-chip" href="/toilet/siheung/">시흥동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 구로구</h3><div class="region-chips">
+        <a class="region-chip" href="/toilet/guro/">구로동</a>
+        <a class="region-chip" href="/toilet/sindorim/">신도림동</a>
+        <a class="region-chip" href="/toilet/garibong/">가리봉동</a>
+        <a class="region-chip" href="/toilet/gaebong/">개봉동</a>
+        <a class="region-chip" href="/toilet/oryu/">오류동</a>
+        <a class="region-chip" href="/toilet/gochuk/">고척동</a>
+        <a class="region-chip" href="/toilet/gung/">궁동</a>
+        <a class="region-chip" href="/toilet/onsu/">온수동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 영등포구</h3><div class="region-chips">
+        <a class="region-chip" href="/toilet/yeongdeungpo/">영등포동</a>
+        <a class="region-chip" href="/toilet/yeouido/">여의동</a>
+        <a class="region-chip" href="/toilet/dangsan/">당산동</a>
+        <a class="region-chip" href="/toilet/mullae/">문래동</a>
+        <a class="region-chip" href="/toilet/dorim/">도림동</a>
+        <a class="region-chip" href="/toilet/yangpyeong/">양평동</a>
+        <a class="region-chip" href="/toilet/singil/">신길동</a>
+        <a class="region-chip" href="/toilet/daelim/">대림동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 서초구</h3><div class="region-chips">
+        <a class="region-chip" href="/toilet/seocho/">서초동</a>
+        <a class="region-chip" href="/toilet/jamwon/">잠원동</a>
+        <a class="region-chip" href="/toilet/banpo/">반포동</a>
+        <a class="region-chip" href="/toilet/bangbae/">방배동</a>
+        <a class="region-chip" href="/toilet/yangjae/">양재동</a>
+        <a class="region-chip" href="/toilet/naegok/">내곡동</a>
+        <a class="region-chip" href="/toilet/yeomgok/">염곡동</a>
+      </div></div>
 </div>
-
-<div class="cb">
-  <h2>배관 문제, 혼자 고민하지 마세요!<br>관악배관천사가 도와드릴게요 😊</h2>
-  <p>365일 24시간 · 서울 서남권 전 지역 출장 · 도착 후 견적 · 동의 후 작업</p>
-  <a class="ctel" href="tel:07089833421">📞 070-8983-3421</a>
+<div class="tab-panel-GW " id="tpnl_GW_leak">
+<div class="gu-block"><h3 class="gu-name">🏢 관악구</h3><div class="region-chips">
+        <a class="region-chip" href="/leak/sinlim/">신림동</a>
+        <a class="region-chip" href="/leak/seorim/">서림동</a>
+        <a class="region-chip" href="/leak/sinsa/">신사동</a>
+        <a class="region-chip" href="/leak/bongcheon/">봉천동</a>
+        <a class="region-chip" href="/leak/jungyang/">중앙동</a>
+        <a class="region-chip" href="/leak/inheon/">인헌동</a>
+        <a class="region-chip" href="/leak/namhyeon/">남현동</a>
+        <a class="region-chip" href="/leak/cheongryong/">청룡동</a>
+        <a class="region-chip" href="/leak/naksungdae/">낙성대동</a>
+        <a class="region-chip" href="/leak/samseong/">삼성동</a>
+        <a class="region-chip" href="/leak/jowon/">조원동</a>
+        <a class="region-chip" href="/leak/daehak/">대학동</a>
+        <a class="region-chip" href="/leak/euncheon/">은천동</a>
+        <a class="region-chip" href="/leak/seonghyeon/">성현동</a>
+        <a class="region-chip" href="/leak/haengwoon/">행운동</a>
+        <a class="region-chip" href="/leak/cheonglim/">청림동</a>
+        <a class="region-chip" href="/leak/nangok/">난곡동</a>
+        <a class="region-chip" href="/leak/nanhyang/">난향동</a>
+        <a class="region-chip" href="/leak/miseong/">미성동</a>
+        <a class="region-chip" href="/leak/sinwon/">신원동</a>
+        <a class="region-chip" href="/leak/wangsan/">왕산동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 동작구</h3><div class="region-chips">
+        <a class="region-chip" href="/leak/noryangjin/">노량진동</a>
+        <a class="region-chip" href="/leak/sangdo/">상도동</a>
+        <a class="region-chip" href="/leak/heukseok/">흑석동</a>
+        <a class="region-chip" href="/leak/sadang/">사당동</a>
+        <a class="region-chip" href="/leak/daebang/">대방동</a>
+        <a class="region-chip" href="/leak/sindaebang/">신대방동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 금천구</h3><div class="region-chips">
+        <a class="region-chip" href="/leak/gasan/">가산동</a>
+        <a class="region-chip" href="/leak/doksan/">독산동</a>
+        <a class="region-chip" href="/leak/siheung/">시흥동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 구로구</h3><div class="region-chips">
+        <a class="region-chip" href="/leak/guro/">구로동</a>
+        <a class="region-chip" href="/leak/sindorim/">신도림동</a>
+        <a class="region-chip" href="/leak/garibong/">가리봉동</a>
+        <a class="region-chip" href="/leak/gaebong/">개봉동</a>
+        <a class="region-chip" href="/leak/oryu/">오류동</a>
+        <a class="region-chip" href="/leak/gochuk/">고척동</a>
+        <a class="region-chip" href="/leak/gung/">궁동</a>
+        <a class="region-chip" href="/leak/onsu/">온수동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 영등포구</h3><div class="region-chips">
+        <a class="region-chip" href="/leak/yeongdeungpo/">영등포동</a>
+        <a class="region-chip" href="/leak/yeouido/">여의동</a>
+        <a class="region-chip" href="/leak/dangsan/">당산동</a>
+        <a class="region-chip" href="/leak/mullae/">문래동</a>
+        <a class="region-chip" href="/leak/dorim/">도림동</a>
+        <a class="region-chip" href="/leak/yangpyeong/">양평동</a>
+        <a class="region-chip" href="/leak/singil/">신길동</a>
+        <a class="region-chip" href="/leak/daelim/">대림동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 서초구</h3><div class="region-chips">
+        <a class="region-chip" href="/leak/seocho/">서초동</a>
+        <a class="region-chip" href="/leak/jamwon/">잠원동</a>
+        <a class="region-chip" href="/leak/banpo/">반포동</a>
+        <a class="region-chip" href="/leak/bangbae/">방배동</a>
+        <a class="region-chip" href="/leak/yangjae/">양재동</a>
+        <a class="region-chip" href="/leak/naegok/">내곡동</a>
+        <a class="region-chip" href="/leak/yeomgok/">염곡동</a>
+      </div></div>
 </div>
-
+<div class="tab-panel-GW " id="tpnl_GW_replace">
+<div class="gu-block"><h3 class="gu-name">🏢 관악구</h3><div class="region-chips">
+        <a class="region-chip" href="/replace/sinlim/">신림동</a>
+        <a class="region-chip" href="/replace/seorim/">서림동</a>
+        <a class="region-chip" href="/replace/sinsa/">신사동</a>
+        <a class="region-chip" href="/replace/bongcheon/">봉천동</a>
+        <a class="region-chip" href="/replace/jungyang/">중앙동</a>
+        <a class="region-chip" href="/replace/inheon/">인헌동</a>
+        <a class="region-chip" href="/replace/namhyeon/">남현동</a>
+        <a class="region-chip" href="/replace/cheongryong/">청룡동</a>
+        <a class="region-chip" href="/replace/naksungdae/">낙성대동</a>
+        <a class="region-chip" href="/replace/samseong/">삼성동</a>
+        <a class="region-chip" href="/replace/jowon/">조원동</a>
+        <a class="region-chip" href="/replace/daehak/">대학동</a>
+        <a class="region-chip" href="/replace/euncheon/">은천동</a>
+        <a class="region-chip" href="/replace/seonghyeon/">성현동</a>
+        <a class="region-chip" href="/replace/haengwoon/">행운동</a>
+        <a class="region-chip" href="/replace/cheonglim/">청림동</a>
+        <a class="region-chip" href="/replace/nangok/">난곡동</a>
+        <a class="region-chip" href="/replace/nanhyang/">난향동</a>
+        <a class="region-chip" href="/replace/miseong/">미성동</a>
+        <a class="region-chip" href="/replace/sinwon/">신원동</a>
+        <a class="region-chip" href="/replace/wangsan/">왕산동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 동작구</h3><div class="region-chips">
+        <a class="region-chip" href="/replace/noryangjin/">노량진동</a>
+        <a class="region-chip" href="/replace/sangdo/">상도동</a>
+        <a class="region-chip" href="/replace/heukseok/">흑석동</a>
+        <a class="region-chip" href="/replace/sadang/">사당동</a>
+        <a class="region-chip" href="/replace/daebang/">대방동</a>
+        <a class="region-chip" href="/replace/sindaebang/">신대방동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 금천구</h3><div class="region-chips">
+        <a class="region-chip" href="/replace/gasan/">가산동</a>
+        <a class="region-chip" href="/replace/doksan/">독산동</a>
+        <a class="region-chip" href="/replace/siheung/">시흥동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 구로구</h3><div class="region-chips">
+        <a class="region-chip" href="/replace/guro/">구로동</a>
+        <a class="region-chip" href="/replace/sindorim/">신도림동</a>
+        <a class="region-chip" href="/replace/garibong/">가리봉동</a>
+        <a class="region-chip" href="/replace/gaebong/">개봉동</a>
+        <a class="region-chip" href="/replace/oryu/">오류동</a>
+        <a class="region-chip" href="/replace/gochuk/">고척동</a>
+        <a class="region-chip" href="/replace/gung/">궁동</a>
+        <a class="region-chip" href="/replace/onsu/">온수동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 영등포구</h3><div class="region-chips">
+        <a class="region-chip" href="/replace/yeongdeungpo/">영등포동</a>
+        <a class="region-chip" href="/replace/yeouido/">여의동</a>
+        <a class="region-chip" href="/replace/dangsan/">당산동</a>
+        <a class="region-chip" href="/replace/mullae/">문래동</a>
+        <a class="region-chip" href="/replace/dorim/">도림동</a>
+        <a class="region-chip" href="/replace/yangpyeong/">양평동</a>
+        <a class="region-chip" href="/replace/singil/">신길동</a>
+        <a class="region-chip" href="/replace/daelim/">대림동</a>
+      </div></div>
+<div class="gu-block"><h3 class="gu-name">🏢 서초구</h3><div class="region-chips">
+        <a class="region-chip" href="/replace/seocho/">서초동</a>
+        <a class="region-chip" href="/replace/jamwon/">잠원동</a>
+        <a class="region-chip" href="/replace/banpo/">반포동</a>
+        <a class="region-chip" href="/replace/bangbae/">방배동</a>
+        <a class="region-chip" href="/replace/yangjae/">양재동</a>
+        <a class="region-chip" href="/replace/naegok/">내곡동</a>
+        <a class="region-chip" href="/replace/yeomgok/">염곡동</a>
+      </div></div>
+</div>
+<script>function showTabGW(svc){document.querySelectorAll(".tab-btn-GW").forEach(b=>b.classList.remove("active"));document.querySelectorAll(".tab-panel-GW").forEach(p=>p.classList.remove("active"));document.getElementById("tbtn_GW_"+svc).classList.add("active");document.getElementById("tpnl_GW_"+svc).classList.add("active");}</script>
 <footer>
   <strong>관악배관천사</strong><br>
   서울특별시 관악구 보라매로 8<br>
