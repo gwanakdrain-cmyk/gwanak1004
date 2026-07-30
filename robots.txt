@@ -8,4 +8,23 @@ Allow: /
 Disallow: /gwanak-final-index/
 Disallow: /gwanak-naver-index/
 
+# AI 크롤러 허용
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://gwanak1004.co.kr/sitemap.xml
